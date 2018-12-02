@@ -1,6 +1,7 @@
 import { Component, ViewChild, ViewContainerRef, OnInit, HostListener } from '@angular/core';
 import { WindowService, WindowComponent, WindowRef } from '@progress/kendo-angular-dialog';
 import { WindowContentOneComponent } from './window-content-one/window-content-one.component';
+import { FormGroup, FormControl } from '@angular/forms';
 
 interface WindowConfig {
   title: string;
@@ -33,11 +34,7 @@ export class ContentComponent implements OnInit {
     // console.log(e);
   }
 
-
-
   constructor( private windowService: WindowService ) {}
-
-
 
   private createWindow(windowConfig: WindowConfig) {
     const windowRef: WindowRef = this.windowService.open({
@@ -96,16 +93,5 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit() {
-    // window.addEventListener('mouseup', (event: MouseEvent) => {
-    //   console.log('addEvent...');
-    //   const windowConfig: WindowConfig = JSON.parse(localStorage.getItem('windowConfig'));
-    //   if (windowConfig != null) {
-    //     this.createWindow({
-    //       ...windowConfig,
-    //       top: event.pageY,
-    //       left: event.pageX
-    //     });
-    //   }
-    // });
   }
 }

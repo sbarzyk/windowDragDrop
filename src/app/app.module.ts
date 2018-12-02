@@ -9,6 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContentComponent } from './content/content.component';
 import { HeaderComponent } from './header/header.component';
 import { WindowContentOneComponent } from './content/window-content-one/window-content-one.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { TextBoxModule, InputsModule } from '@progress/kendo-angular-inputs';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { WindowContentOneComponent } from './content/window-content-one/window-c
     FormsModule,
     ButtonsModule,
     WindowModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    TextBoxModule,
+    InputsModule,
+    DropDownsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

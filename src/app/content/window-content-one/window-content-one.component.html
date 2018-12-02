@@ -1,7 +1,23 @@
-<p>
-  window-content-one works!
-</p>
-<p>
-  <input type="text" name="testInput" [(ngModel)]="value">
-</p>
-value: {{value}}
+<input type="text" [(ngModel)]="value" />
+
+<!-- <form [formGroup]="myForm">
+  <div class="container">
+    <div>
+      <input kendoTextbox />
+    </div>
+    <div>
+      <kendo-textbox-container floatingLabel="First name">
+          <input kendoTextbox  formControlName="firstName"/>
+      </kendo-textbox-container>
+    </div>
+    <div>
+      <kendo-autocomplete
+        formControlName="lastName"
+        [data]="lastNamesSearchResult$ | async"
+        (keyup)="lastNameKeyUp($event)"
+      >
+      </kendo-autocomplete>
+    </div>
+    <div>{{myForm.get('firstName').value}} {{myForm.get('lastName').value}} </div>
+  </div>
+</form> -->
